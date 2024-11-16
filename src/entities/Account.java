@@ -1,5 +1,7 @@
 package entities;
 
+import utils.Utils;
+
 /* Esta classe encapsula os detalhes da conta bancária, incluindo o número da conta, 
  * o saldo e as informações do cliente associado a ela. Ela também fornece métodos 
  * para realizar operações financeiras como depósito, saque e transferência */
@@ -15,7 +17,7 @@ public class Account {
 	public Account(Client cliente) {
 		this.numeroConta = Utils.accountGenerator();
 		this.cliente = cliente;
-		this.dataCriacao = Utils.creationDate();
+		this.dataCriacao = Utils.createDate();
 	}
 
 	public Integer getNumeroConta() {
@@ -47,7 +49,7 @@ public class Account {
 			saldo += valor;
 		}
 		else {
-			throw new IllegalArgumentException("O valor de depósito deve ser maior que 0.")
+			throw new IllegalArgumentException("O valor de depósito deve ser maior que 0.");
 		}
 	}
 	
