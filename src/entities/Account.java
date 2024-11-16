@@ -9,7 +9,7 @@ import utils.Utils;
 
 public class Account {
 	
-	private Integer numeroConta;
+	private int numeroConta;
 	private Client cliente;
 	private Double saldo = 0.0;
 	private String dataCriacao;
@@ -77,13 +77,14 @@ public class Account {
 	public String toString() {
 		return String.format(
 				"\nId Cliente: %d\nNumero da Conta: %d\nNome: %s\nCPF: %s\n"
-				+ "Email: %s\nSaldo: %d\nData de Criação: %s"
+				+ "Email: %s\nSaldo: %s\nData de Criação: %s"
 						,cliente.getIdCliente(),
 						numeroConta,
 						cliente.getNome(),
 						cliente.getCpf(),
 						cliente.getEmail(),
 						Utils.doubleToString(saldo),
-						getDataCriacao());
+						getDataCriacao()
+					);
 	}
 }

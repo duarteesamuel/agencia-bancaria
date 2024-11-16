@@ -5,6 +5,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import entities.Account;
+import services.AccountService;
 
 public class OptionsMenu implements BankOperations {
 	
@@ -36,23 +37,23 @@ public class OptionsMenu implements BankOperations {
 		System.out.println("|0. - Finalizar           |");
 		
 		System.out.print("Escolha uma opção: ");
-		int option = sc.nextInt();
+		int opcao = sc.nextInt();
 		
-		switch(option) {
+		switch(opcao) {
 			case 1:
-				createAccount();
+				AccountService.createAccount();
 				break;
 			case 2:
-				deposit();
+				AccountService.deposit();
 				break;
 			case 3:
-				withdraw();
+				AccountService.withdraw();
 				break;
 			case 4:
-				transfer();
+				AccountService.transfer();
 				break;
 			case 5:
-				listAccounts();
+				AccountService.listAccounts();
 				break;
 			case 0:
 				System.out.println("Encerrando...");

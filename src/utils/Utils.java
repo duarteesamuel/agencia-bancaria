@@ -26,8 +26,8 @@ public class Utils {
 	}
 	
 	//Método para gerar números de conta aleatorio, sem gerar números iguais
-	public static Integer accountGenerator() {
-		Integer numeroConta;
+	public static int accountGenerator() {
+		int numeroConta;
 		
 		do {
 			numeroConta = geradorNumero.nextInt(9999) + 1;	
