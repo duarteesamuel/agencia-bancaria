@@ -46,6 +46,7 @@ public class Client {
 		this.email = email;
 	}
 	
+	@Override
 	public String toString() {
 		return String.format(
 				"\nId: %d\nNome: %s\nCPF: %s\nEmail: %s",
