@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import entities.Account;
 import services.AccountService;
+import utils.Utils;
 
 public class OptionsMenu implements BankOperations {
 	
@@ -41,29 +42,37 @@ public class OptionsMenu implements BankOperations {
 		
 		switch(opcao) {
 			case 1:
+				Utils.sleep();
 				AccountService.createAccount();
 				break;
 			case 2:
+				Utils.sleep();
 				AccountService.deposit();
 				break;
 			case 3:
+				Utils.sleep();
 				AccountService.withdraw();
 				break;
 			case 4:
+				Utils.sleep();
 				AccountService.transfer();
 				break;
 			case 5:
+				Utils.sleep();
 				AccountService.listAccounts();
 				break;
 			case 0:
 				System.out.println("Encerrando...");
+				Utils.sleep();
 				System.out.println("Obrigado por utilizar o Soul Bank!");
 				System.exit(0);
 			default:
 				System.out.println("Opção inválida, digite novamente!");
+				Utils.sleep();
 				displayMenu();
 				break;
 		}
+		Utils.sleep();
 		displayMenu();
 	}
 }

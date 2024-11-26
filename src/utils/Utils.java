@@ -41,4 +41,13 @@ public class Utils {
 	public static String createDate() {
 		return dataHora.format(formatoData);
 	}
+	
+	public static void sleep() {
+		try {
+			Thread.sleep(2000);
+		}
+		catch(InterruptedException e) {
+			System.out.println("Erro ao tentar a pausar o programa");
+		}
+	}
 }
