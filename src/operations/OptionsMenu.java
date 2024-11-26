@@ -66,6 +66,10 @@ public class OptionsMenu implements BankOperations {
 				Utils.sleep();
 				AccountService.deleteAccount();
 				break;
+			case 7:
+				Utils.sleep();
+				AccountService.updateAccount();
+				break;
 			case 0:
 				System.out.println("Encerrando...");
 				Utils.sleep();

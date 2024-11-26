@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import entities.Account;
 import entities.Client;
+import utils.Utils;
 
 public class AccountService {
 	
@@ -118,14 +119,26 @@ public class AccountService {
 		Account conta = findById(idConta);
 		
 		if (conta != null) {
+			System.out.println("Conta encontrada. Carregando os dados...");
+			Utils.sleep();
+			System.out.println(conta);
+			Utils.sleep();
+			System.out.println("Removendo conta...");
+			Utils.sleep();
+			System.out.println();
 			contasBancarias.remove(conta);
-			System.out.printf("Conta com id %d removida com sucesso!%n", idConta);
+			System.out.println("Conta removida com sucesso!");
 		}
 		else {
-			System.out.printf("Nenhuma conta relacionada ao id %d!%n", idConta);
+			System.out.println("Nenhuma conta relacionada a esse Id.");
 		}
 	}
 	
+	//Implementar a lógica para atualizar os dados deu ma conta
+	public static void updateAccount() {
+		
+	}
+		
 	public static Account findAccount(int numeroConta) {
 		for (Account account : contasBancarias) {
 			if (account.getNumeroConta() == numeroConta) {
