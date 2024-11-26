@@ -35,6 +35,7 @@ public class OptionsMenu implements BankOperations {
 		System.out.println("|3. - Saque               |");
 		System.out.println("|4. - Transferência       |");
 		System.out.println("|5. - Listar Contas       |");
+		System.out.println("|6. - Deletar conta       |");
 		System.out.println("|0. - Finalizar           |");
 		
 		System.out.print("Escolha uma opção: ");
@@ -60,6 +61,10 @@ public class OptionsMenu implements BankOperations {
 			case 5:
 				Utils.sleep();
 				AccountService.listAccounts();
+				break;
+			case 6:
+				Utils.sleep();
+				AccountService.deleteAccount();
 				break;
 			case 0:
 				System.out.println("Encerrando...");

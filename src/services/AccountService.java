@@ -111,9 +111,33 @@ public class AccountService {
 		}
 	}
 	
+	public static void deleteAccount() {
+		System.out.print("ID da conta: ");
+		int idConta = sc.nextInt();
+		
+		Account conta = findById(idConta);
+		
+		if (conta != null) {
+			contasBancarias.remove(conta);
+			System.out.printf("Conta com id %d removida com sucesso!%n", idConta);
+		}
+		else {
+			System.out.printf("Nenhuma conta relacionada ao id %d!%n", idConta);
+		}
+	}
+	
 	public static Account findAccount(int numeroConta) {
 		for (Account account : contasBancarias) {
 			if (account.getNumeroConta() == numeroConta) {
+				return account;
+			}
+		}
+		return null;
+	}
+	
+	public static Account findById(int id) {
+		for (Account account : contasBancarias) {
+			if(account.getCliente().getIdCliente() == id) {
 				return account;
 			}
 		}
